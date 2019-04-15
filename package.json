@@ -1,0 +1,16 @@
+{
+  "name": "spkhotel",
+  "version": "0.0.5",
+  "description": "dss application for hotel selection",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex teo",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.18",
+    "vue": "^2.6.10"
+  }
+}
