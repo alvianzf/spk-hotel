@@ -1,6 +1,6 @@
-# spkhotel-view
+# spkhotel
 
-> a vue project for the SPK Hotel app
+> a Vue Project
 
 ## Build Setup
 

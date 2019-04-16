@@ -1,8 +1,8 @@
 {
-  "name": "spkhotel-view",
-  "description": "a vue project for the SPK Hotel app",
+  "name": "spkhotel",
+  "description": "a Vue Project",
   "version": "1.0.0",
-  "author": "Alex Teo",
+  "author": "Alex Theo",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -22,6 +22,8 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "node-sass": "^4.6.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "vue-loader": "^13.5.0",
     "vue-template-compiler": "^2.5.3",
