@@ -24,7 +24,11 @@
     </v-toolbar>
 
     <v-content>
-      <router-view></router-view>
+      <router-view>
+        <vue-toastr ref="toastr"></vue-toastr>
+
+
+      </router-view>
     </v-content>
     <Footer />
   </v-app>

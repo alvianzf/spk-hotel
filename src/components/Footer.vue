@@ -21,7 +21,9 @@ export default {
 </script>
 
 <style scoped>
+
 span {
     color: #dadada;
 }
+
 </style>

@@ -13,7 +13,7 @@
                 </span>
             </v-btn>
 
-            <v-btn color="default">
+            <v-btn color="default" outline>
                 <span>
                     informasi hotel
                 </span>
