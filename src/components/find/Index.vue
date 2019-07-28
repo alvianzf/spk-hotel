@@ -31,7 +31,7 @@
                 </v-flex>
                 <v-flex lg4>
                     <v-card>
-                        <v-card-text v-for="daftar in list" className="data">
+                        <v-card-text v-for="daftar in list" v-bind:key="daftar.data" className="data">
                             {{daftar.data}}
                         </v-card-text>
                     </v-card>
@@ -40,7 +40,6 @@
 
                 </v-flex>
             </v-layout>
-            </v-text-field>
         <v-layout>
         </v-layout>
         </v-flex>
@@ -70,7 +69,7 @@ export default {
                 fasilitas: list.length
             })
             .then(function(res) {
-                console.log(res.data)
+                
             })
         },
         tambahFasilitas(e) {

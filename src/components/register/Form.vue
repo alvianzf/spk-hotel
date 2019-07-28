@@ -76,18 +76,18 @@ export default {
             this.snackbar = true
 
             e.preventDefault();
-            let currentObj = this;
+            
             this.axios.post('http://api.local/user/post', {
                 fullname: this.fullname,
                 email: this.email,
                 password: this.password,
             })
             .then(function(res) {
-                console.log(res.data)
+                
                 window.location.href = 'find-hotel'
             })
             .catch(function(err) {
-                console.log(err)
+                
             })
         }
     }
