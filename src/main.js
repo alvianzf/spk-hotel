@@ -10,7 +10,7 @@ import Toasted from 'vue-toasted'
 window.Vue = require('vue');
 
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 Vue.use(Router)
 import routes from './routes'
