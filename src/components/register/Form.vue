@@ -49,6 +49,19 @@
                         </v-btn>
 
                     </v-snackbar>
+                    <v-snackbar
+                    v-model="errbar"
+                    >
+                    {{ errtext }}
+                        <v-btn
+                            color="pink"
+                            text
+                            @click="errbar = false"
+                        >
+                            Close
+                        </v-btn>
+
+                    </v-snackbar>
                 </v-layout>
             </v-container>
 
@@ -66,6 +79,8 @@ export default {
         success: '',
         snackbar: false,
         text: 'Berhasil mendaftarkan',
+        errbar: false,
+        errtext: 'gagal mendaftarkan',
         nameRules: [
             v => !!v || 'Mohon isi nama anda',
             v => v.length >=4 || 'Nama harus minimal 4 karakter'
@@ -77,17 +92,18 @@ export default {
 
             e.preventDefault();
             
-            this.axios.post('http://api.local/user/post', {
-                fullname: this.fullname,
+            this.axios.post('https://hotelspk.herokuapp.com/api/users', {
+                name: this.fullname,
                 email: this.email,
                 password: this.password,
             })
             .then(function(res) {
-                
+                console.log(res)
                 window.location.href = 'find-hotel'
             })
             .catch(function(err) {
-                
+                console.log(err)
+                e.errbar = true
             })
         }
     }

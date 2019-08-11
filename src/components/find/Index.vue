@@ -48,9 +48,11 @@
 </template>
 
 <script>
-    var obj = [];
-    var list = [];
- import GMap from './Map.vue'
+
+var obj = [];
+var list = [];
+
+import GMap from './Map.vue';
 
 export default {
     data: () => ({
@@ -61,32 +63,30 @@ export default {
     }),
     methods: {
         submit (e) {
-            e.preventDefault();
+            var data = this.$store
 
-            this.axios.post('http://api.local/find/hotel', {
-                harga: this.harga,
-                jarak: null,
-                fasilitas: list.length
+            this.axios.get('https://hotelspk.herokuapp.com/api/topsis', {
+                price: this.harga,
+                preference: list.length
             })
             .then(function(res) {
-                
+                data.commit('choiceResult', res.data.choice)
+                window.location.href= 'results'
+            }).catch(function(err) {
+                console.log(err)
             })
+
         },
         tambahFasilitas(e) {
 
             if (obj.indexOf(this.key) == -1) {
                 list.push({data: this.key})
-
-                console.log(list)
             }
-
             obj.push(this.key);
-            
         },
         close(e) {
             console.log(e)
-
-        }
+        },
     },
     components: {
         GMap

@@ -2,6 +2,7 @@ import Home from './components/home/Index.vue'
 import Register from './components/register/Index.vue'
 import About from './components/about/Index.vue'
 import Find from './components/find/Index.vue'
+import Results from './components/results/Index.vue'
 
 export default [
     {
@@ -19,5 +20,9 @@ export default [
     {
         path: '/find-hotel',
         component: Find
+    },
+    {
+        path: '/results',
+        component: Results
     }
 ]

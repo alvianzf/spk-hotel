@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import './plugins/vuetify'
+import store from './store/store'
 import App from './App.vue'
 import Router from 'vue-router'
 import axios from 'axios'
@@ -7,7 +8,7 @@ import VueAxios from 'vue-axios'
 import * as VueGoogleMaps from "vue2-google-maps";
 import VueSweetalert2 from 'vue-sweetalert2'
 import Toasted from 'vue-toasted'
-window.Vue = require('vue');
+import vuexPersistane from 'vuex-persist'
 
 
 Vue.config.productionTip = true
@@ -34,5 +35,6 @@ const router = new Router({
 
 new Vue({
   router: router,
+  store,
   render: h => h(App),
 }).$mount('#app')
