@@ -3,6 +3,9 @@
     <v-flex lg-4>
         <v-card color="info" dark>
             <v-card-text>
+                <h3>
+                    Halo {{ $store.getters.username }}
+                </h3>
                 <h2>
                     Hasil anda: {{ $store.getters.choiceResult }}
                 </h2>
@@ -50,6 +53,20 @@ export default {
         },
         confirms (e) {
 
+            var username = this.$store.getters.username
+            var selection = this.$store.getters.choiceResult
+
+            this.axios.post('http://hotelspk.herokuapp.com/api/history', {
+                user_name : username,
+                date: ts.toDateString(),
+                selection: selection
+            }).then(function (res) {
+                console.log(res)
+            }).catch(function (err) {
+                console.log(err.message)
+            })
+
+            window.location.href = 'https://hotelspk.herokuapp.com/api/history'
         }
     }
 }

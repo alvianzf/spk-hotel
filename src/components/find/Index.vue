@@ -91,6 +91,7 @@ export default {
                 data.commit('choiceResult', res.data.choice)
                 data.commit('distance', res.data.distance)
                 data.commit('rate', res.data.rate)
+                
                 window.location.href= 'results'
             }).catch(function(err) {
                 console.log(err)

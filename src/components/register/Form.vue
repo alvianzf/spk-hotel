@@ -105,6 +105,9 @@ export default {
                 console.log(err)
                 e.errbar = true
             })
+
+            this.$store.commit('username', this.fullname)
+            this.$store.commit('email', this.email)
         }
     }
 }

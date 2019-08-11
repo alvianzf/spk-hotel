@@ -16,7 +16,8 @@ const store = new Vuex.Store({
         choiceResult: '',
         distance: '',
         rate: '',
-        email: ''
+        email: '',
+        username: ''
     },
     mutations:{
         login (state, token) {
@@ -30,6 +31,12 @@ const store = new Vuex.Store({
         },
         rate (state, rate) {
             state.rate = rate
+        },
+        username (state, username) {
+            state.username = username
+        },
+        email (state, email){
+            state.email = email
         }
 
     },
@@ -37,7 +44,9 @@ const store = new Vuex.Store({
         token: state => state.token,
         choiceResult: state => state.choiceResult,
         distance: state => state.distance,
-        rate: state => state.rate
+        rate: state => state.rate,
+        username: state => state.username,
+        email: state => state.email
     }
 })
 
