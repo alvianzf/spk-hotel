@@ -51,6 +51,24 @@
 
 var obj = [];
 var list = [];
+var choices = []
+
+var distMatrix = [],
+    rateMatrix = [], 
+    preferenceMatrix = [],
+    NIS = [],
+    PIS = [],
+    negDet = [],
+    posDet =[],
+    finalMatrix =[]
+    // matrix =[]
+
+var distanceSq = 0,
+    rateSq = 0,
+    PrefSq = 0,
+    choice = 0,
+    index = 0
+
 
 import GMap from './Map.vue';
 
@@ -71,11 +89,13 @@ export default {
             })
             .then(function(res) {
                 data.commit('choiceResult', res.data.choice)
+                data.commit('distance', res.data.distance)
+                data.commit('rate', res.data.rate)
                 window.location.href= 'results'
             }).catch(function(err) {
                 console.log(err)
             })
-
+        
         },
         tambahFasilitas(e) {
 

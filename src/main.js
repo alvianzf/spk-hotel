@@ -8,7 +8,6 @@ import VueAxios from 'vue-axios'
 import * as VueGoogleMaps from "vue2-google-maps";
 import VueSweetalert2 from 'vue-sweetalert2'
 import Toasted from 'vue-toasted'
-import vuexPersistane from 'vuex-persist'
 
 
 Vue.config.productionTip = true
